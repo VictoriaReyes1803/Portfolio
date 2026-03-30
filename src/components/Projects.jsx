@@ -19,11 +19,11 @@ const projects = [
     title: 'Nexus Platform',
     subtitle: 'Internal platform · Angular + Django',
     description:
-      'Full-stack internal management platform with an Angular SPA frontend and a Django REST API backend.',
+      'Full-stack internal management platform — Angular SPA on the frontend, Django REST API on the backend, with a relational schema covering complex multi-entity business workflows.',
     highlights: [
-      'Angular frontend with modular feature architecture and reactive forms',
-      'Django REST Framework backend with custom serializers and role-based access',
-      'Relational schema designed for multi-entity business workflows',
+      'Angular SPA: modular feature architecture, reactive forms, and role-based UI access',
+      'Django REST Framework: custom serializers, auth middleware, and permission layers',
+      'PostgreSQL schema designed for multi-entity relationships and data integrity constraints',
     ],
     stack: ['Angular', 'Django', 'Python', 'PostgreSQL', 'REST API'],
   },
@@ -41,15 +41,15 @@ const projects = [
   },
   {
     title: 'Mayan GPS — Internship',
-    subtitle: 'GPS platform · Dashboard development',
+    subtitle: 'GPS platform · Backend + Dashboard',
     description:
-      'Contributed to a GPS tracking platform during an internship — focused on dashboard development and frontend performance.',
+      'Fullstack contributions to a GPS tracking platform — backend API work, MongoDB data layer, and a real-time React dashboard for live vehicle tracking.',
     highlights: [
-      'Built real-time tracking dashboard for high-frequency GPS data',
-      'Optimized rendering performance for large, continuously updating datasets',
-      'Collaborated on UI/UX improvements aligned with end-user workflows',
+      'Built and optimized Node.js/MongoDB backend queries for high-frequency GPS data',
+      'Achieved 25% performance improvement through query optimization and frontend rendering pipeline fixes',
+      'Developed real-time tracking dashboard consuming live WebSocket and REST data streams',
     ],
-    stack: ['React', 'REST APIs', 'JavaScript'],
+    stack: ['React', 'Node.js', 'MongoDB', 'WebSockets', 'REST APIs'],
   },
   {
     title: 'Lockity',

@@ -17,8 +17,8 @@ const experiences = [
     company: 'Nexus Platform',
     role: 'Fullstack Developer',
     bullets: [
-      'Built internal platform with Angular frontend and Django REST API backend',
-      'Designed data models and REST endpoints for core business workflows',
+      'Built Angular SPA frontend with modular architecture, reactive forms, and role-based views',
+      'Designed Django REST API backend: custom serializers, auth middleware, and relational schema for multi-entity workflows',
     ],
   },
   {
@@ -35,8 +35,9 @@ const experiences = [
     company: 'Mayan GPS',
     role: 'Software Developer Intern',
     bullets: [
-      'Built real-time GPS tracking dashboard for high-frequency data updates',
-      'Optimized frontend rendering performance and improved UI responsiveness',
+      'Built real-time GPS tracking dashboard consuming high-frequency WebSocket/REST data (React, Node.js, MongoDB)',
+      'Optimized backend query patterns and frontend rendering pipeline — achieved 25% performance improvement',
+      'Contributed to both API layer and client-side data handling for live vehicle tracking workflows',
     ],
   },
 ]
