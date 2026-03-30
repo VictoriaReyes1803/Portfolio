@@ -7,13 +7,13 @@ const fadeUp = (delay = 0) => ({
 })
 
 const profileItems = [
-  { label: 'Focus', value: 'Backend · Data Engineering · SaaS Architecture' },
-  { label: 'Current Work', value: 'Construction intelligence & contractor analytics' },
-  { label: 'Strengths', value: 'API integrations · Multi-tenant systems · ETL · AI scoring' },
+  { label: 'Focus', value: 'Backend · Data Engineering · Fullstack' },
+  { label: 'Experience', value: 'SaaS · ETL · API integrations · AI scoring' },
+  { label: 'Stack', value: 'Node.js · Django · PostgreSQL · React · Angular' },
   { label: 'Location', value: 'Torreón, Coahuila, Mexico' },
 ]
 
-const heroBadges = ['Node.js', 'PostgreSQL', 'Supabase', 'ETL Pipelines', 'REST APIs', 'React']
+const heroBadges = ['Node.js', 'Django', 'PostgreSQL', 'React', 'Angular', 'Supabase']
 
 export default function Hero() {
   return (

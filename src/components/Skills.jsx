@@ -6,30 +6,28 @@ const skills = [
     title: 'Backend & Data',
     items: [
       'Node.js',
+      'Python',
+      'Django / REST Framework',
       'PostgreSQL',
       'Supabase',
-      'REST API Design',
       'ETL / Data Pipelines',
+      'REST API Design',
       'Multi-tenant Architecture',
-      'Batch Processing',
-      'JSON / Nested Payload Parsing',
-      'Data Normalization',
       'Row Level Security (RLS)',
       'SQL Query Optimization',
-      'API Integration',
     ],
   },
   {
     title: 'Frontend',
-    items: ['React', 'Next.js', 'Vite', 'Tailwind CSS', 'Angular', 'Ionic'],
+    items: ['React', 'Angular', 'Next.js', 'Vite', 'Tailwind CSS', 'Ionic'],
   },
   {
     title: 'Infrastructure',
-    items: ['Linux', 'Docker', 'Nginx', 'Vercel', 'DigitalOcean', 'AWS (basics)', 'Git & GitHub'],
+    items: ['Linux', 'Nginx', 'Docker', 'Vercel', 'DigitalOcean', 'AWS (basics)', 'Git & GitHub'],
   },
   {
     title: 'Additional',
-    items: ['C# / .NET', 'TypeScript', 'MongoDB', 'SQL Server', 'Android (Java)', 'Claude AI SDK'],
+    items: ['TypeScript', 'C# / .NET', 'MongoDB', 'SQL Server', 'Android (Java)', 'Claude AI SDK'],
   },
 ]
 

@@ -1,35 +1,44 @@
 import { motion } from 'framer-motion'
 import SectionTitle from './SectionTitle'
 
-const highlights = [
+const experiences = [
   {
-    number: '01',
-    title: 'Real-world systems',
-    body: 'Experience building internal and client-facing platforms with real users, operational constraints, and continuously evolving product needs. I ship features that work in production — not just in development.',
+    period: '2025 – Present',
+    company: 'Magpie in Blue',
+    role: 'Fullstack Engineer · Backend & Data Lead',
+    bullets: [
+      'Built multi-tenant SaaS for HVAC construction intelligence (Node.js, Supabase, PostgreSQL)',
+      'Designed ETL pipelines: permit ingestion, ERP sync, and AI-powered contractor scoring',
+      'Implemented per-tenant data isolation with PostgreSQL RLS',
+    ],
   },
   {
-    number: '02',
-    title: 'Data-intensive work',
-    body: 'Comfortable working with high-volume datasets, deeply nested API payloads, normalization strategies, and analytics-oriented data design. I understand the difference between data that exists and data that is useful.',
+    period: '2025',
+    company: 'Nexus Platform',
+    role: 'Fullstack Developer',
+    bullets: [
+      'Built internal platform with Angular frontend and Django REST API backend',
+      'Designed data models and REST endpoints for core business workflows',
+    ],
   },
   {
-    number: '03',
-    title: 'Architecture mindset',
-    body: "Interested in designing reliable systems, not just shipping isolated features. I think about scale, structure, and long-term maintainability — and I'm willing to make tradeoffs explicit.",
+    period: '2024 – 2025',
+    company: 'Clayens',
+    role: 'Software Engineer',
+    bullets: [
+      'Designed SPCM system end-to-end — architecture, data modeling, and business logic',
+      'Deployed on Linux with Nginx; managed production environment and iterative releases',
+    ],
   },
   {
-    number: '04',
-    title: 'Business alignment',
-    body: 'I like building software that supports real decision-making. Whether it\'s a contractor scoring model or a permit intelligence dashboard, I connect technical work to its commercial purpose.',
+    period: '2023 – 2024',
+    company: 'Mayan GPS',
+    role: 'Software Developer Intern',
+    bullets: [
+      'Built real-time GPS tracking dashboard for high-frequency data updates',
+      'Optimized frontend rendering performance and improved UI responsiveness',
+    ],
   },
-]
-
-const archPoints = [
-  'Multi-tenant SaaS with per-tenant data isolation (RLS)',
-  'Batch API ingestion with retry, dedup, and rate limiting',
-  'Normalized relational schema for high-read analytics',
-  'AI scoring layer integrated into data pipelines',
-  'External API orchestration (ERP, permit data, geocoding)',
 ]
 
 export default function Experience() {
@@ -48,51 +57,35 @@ export default function Experience() {
 
       <div className="relative mx-auto max-w-7xl">
         <SectionTitle
-          eyebrow="Experience Highlights"
-          title="What I bring to a team"
-          description="A combination of technical depth and product-level thinking. I work best in environments where engineering decisions directly shape business outcomes."
+          eyebrow="Experience"
+          title="Where I've worked"
+          description="Production systems, client platforms, and internships across SaaS, industrial software, and GPS tracking."
         />
 
         <div className="grid gap-5 md:grid-cols-2">
-          {highlights.map((item, i) => (
+          {experiences.map((item, i) => (
             <motion.div
-              key={item.number}
+              key={item.company}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group rounded-3xl border border-slate-800 bg-slate-900/50 p-7 transition-all duration-300 hover:border-slate-700 hover:bg-slate-900/80"
             >
-              <p className="font-mono text-xs font-semibold text-cyan-400/60">{item.number}</p>
-              <h3 className="mt-2 text-lg font-bold text-white">{item.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-400">{item.body}</p>
+              <p className="font-mono text-xs font-semibold text-cyan-400/60">{item.period}</p>
+              <h3 className="mt-2 text-lg font-bold text-white">{item.company}</h3>
+              <p className="mt-0.5 text-xs font-medium text-slate-500">{item.role}</p>
+              <ul className="mt-4 space-y-2">
+                {item.bullets.map((b) => (
+                  <li key={b} className="flex items-start gap-2.5 text-sm text-slate-400">
+                    <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-cyan-400/70" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
-
-        {/* Architecture hint card */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.55, delay: 0.3 }}
-          className="mt-6 rounded-3xl border border-cyan-400/15 bg-slate-900/60 p-7"
-        >
-          <div className="flex items-center gap-3 mb-5">
-            <span className="font-mono text-xs font-semibold uppercase tracking-widest text-cyan-400">
-              Architecture in production
-            </span>
-            <span className="h-px flex-1 bg-slate-800" />
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {archPoints.map((point) => (
-              <div key={point} className="flex items-start gap-2.5">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400" />
-                <span className="text-sm text-slate-300">{point}</span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   )

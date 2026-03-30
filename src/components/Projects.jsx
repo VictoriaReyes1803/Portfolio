@@ -4,45 +4,64 @@ import ProjectCard from './ProjectCard'
 const projects = [
   {
     title: 'Magpie in Blue',
-    subtitle: 'Multi-tenant SaaS for construction market intelligence',
+    subtitle: 'Multi-tenant SaaS · Construction market intelligence',
     description:
-      'Built a data-driven SaaS platform for HVAC distributors to analyze construction permits, contractor activity, and commercial opportunities. The system ingests large-scale permit data, enriches it through multiple external APIs, and applies AI-assisted scoring to surface the highest-value opportunities for each tenant.',
+      'Full-stack SaaS platform for HVAC distributors to surface contractor leads from permit data, ERP records, and AI scoring — all isolated per tenant.',
     highlights: [
-      'Multi-tenant architecture using Supabase with PostgreSQL Row Level Security (RLS)',
-      'Large-scale permit data ingestion pipelines with batch processing and deduplication',
+      'Permit data ingestion pipelines: batch processing, dedup, and rate limiting',
       'Integrations with Epicor Eclipse ERP, Shovels permit API, and ZipcodeAPI',
-      'AI-powered opportunity scoring using Claude for contractor ranking and lead prioritization',
-      'Tenant-specific dashboards with filtered business intelligence views',
+      'AI-powered contractor scoring and lead prioritization with Claude AI',
+      'Per-tenant data isolation via PostgreSQL Row Level Security (RLS)',
     ],
-    stack: ['Next.js', 'Node.js', 'Supabase', 'PostgreSQL', 'Claude AI', 'REST APIs', 'RLS'],
+    stack: ['Next.js', 'Node.js', 'Supabase', 'PostgreSQL', 'Claude AI', 'RLS'],
   },
   {
-    title: 'Eclipse Data Ingestion Pipeline',
-    subtitle: 'Enterprise API ingestion and normalization layer',
+    title: 'Nexus Platform',
+    subtitle: 'Internal platform · Angular + Django',
     description:
-      'Designed and implemented a backend ingestion system for complex enterprise data sourced from Epicor Eclipse ERP. The pipeline handles batched API calls, parses deeply nested JSON payloads, normalizes records into a relational schema, and prepares the data for downstream analytics and scoring workflows.',
+      'Full-stack internal management platform with an Angular SPA frontend and a Django REST API backend.',
     highlights: [
-      'Batch-based ingestion strategy with configurable rate limiting and retry logic',
-      'Deep nested JSON parsing and payload normalization for relational storage',
-      'Data transformation layer optimized for analytics and cross-tenant querying',
-      'Schema design for high-read performance across multi-tenant environments',
-      'Integration with downstream scoring and BI modules',
+      'Angular frontend with modular feature architecture and reactive forms',
+      'Django REST Framework backend with custom serializers and role-based access',
+      'Relational schema designed for multi-entity business workflows',
     ],
-    stack: ['Node.js', 'PostgreSQL', 'Supabase', 'Epicor Eclipse API', 'ETL', 'JSON processing'],
+    stack: ['Angular', 'Django', 'Python', 'PostgreSQL', 'REST API'],
   },
   {
-    title: 'Contractor Intelligence System',
-    subtitle: 'Scoring, matching, and enrichment for business leads',
+    title: 'SPCM System — Clayens',
+    subtitle: 'Production system · Full design and Linux deployment',
     description:
-      'Developed the contractor intelligence layer within the Magpie SaaS platform. The system evaluates contractor permit history, enriches profiles with external data sources, applies heuristic and AI-assisted scoring models, and surfaces the most relevant contractors for each distributor tenant based on configurable matching rules.',
+      'Designed and deployed a production system end-to-end at Clayens — from architecture and data modeling to Linux server configuration.',
     highlights: [
-      'Historical permit analysis and contractor activity scoring across jurisdictions',
-      'Multi-source data enrichment: permit APIs, contact databases, and ERP cross-referencing',
-      'Heuristic and AI-assisted scoring with configurable weights per tenant',
-      'Business intelligence datasets for opportunity review workflows',
-      'Tenant-specific opportunity queues with filters, ranking, and export',
+      'Full system design: data model, API layer, and business logic',
+      'Linux server deployment with Nginx as reverse proxy',
+      'Ongoing maintenance and iterative feature delivery in a production environment',
     ],
-    stack: ['Node.js', 'PostgreSQL', 'Supabase', 'Claude AI', 'REST APIs', 'RLS', 'ETL'],
+    stack: ['Linux', 'Nginx', 'Node.js', 'PostgreSQL', 'Docker'],
+  },
+  {
+    title: 'Mayan GPS — Internship',
+    subtitle: 'GPS platform · Dashboard development',
+    description:
+      'Contributed to a GPS tracking platform during an internship — focused on dashboard development and frontend performance.',
+    highlights: [
+      'Built real-time tracking dashboard for high-frequency GPS data',
+      'Optimized rendering performance for large, continuously updating datasets',
+      'Collaborated on UI/UX improvements aligned with end-user workflows',
+    ],
+    stack: ['React', 'REST APIs', 'JavaScript'],
+  },
+  {
+    title: 'Lockity',
+    subtitle: 'Personal project · Web + desktop app',
+    description:
+      'Personal project — a cross-platform credentials and lock management app built with React for both web and desktop.',
+    highlights: [
+      'Single codebase targeting web and desktop via Electron',
+      'Local-first data storage with encrypted credential management',
+      'Clean, minimal UI designed for fast daily use',
+    ],
+    stack: ['React', 'Electron', 'JavaScript'],
   },
 ]
 
@@ -65,10 +84,10 @@ export default function Projects() {
         <SectionTitle
           eyebrow="Projects"
           title="Selected work"
-          description="Systems I've built where data volume, architecture, and API complexity were central to the solution. Each project reflects real production challenges across SaaS, data engineering, and business intelligence."
+          description="Production systems, internal platforms, and personal projects — across SaaS, data engineering, and fullstack development."
         />
 
-        <div className="grid gap-7 lg:grid-cols-3">
+        <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}

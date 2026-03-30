@@ -6,20 +6,17 @@ const pillars = [
   {
     icon: '⬡',
     title: 'Backend Systems',
-    description:
-      'Building secure, scalable services with strong data models, well-structured APIs, and maintainable application logic. I focus on reliability, clear error boundaries, and systems that scale with the product.',
+    description: 'Scalable APIs, reliable data models, and clean application logic built to hold up under real production constraints.',
   },
   {
     icon: '⟡',
     title: 'Data Pipelines',
-    description:
-      'Designing ingestion and transformation workflows for high-volume, nested, and business-critical datasets. From batch processing and normalization to analytics-ready data storage.',
+    description: 'Ingestion and transformation workflows for high-volume, nested datasets — from batch processing to analytics-ready storage.',
   },
   {
     icon: '◈',
     title: 'Fullstack Product',
-    description:
-      'Delivering complete features end-to-end — database schema, API layer, and UI. I care about the entire path data travels, from external source to user-facing output.',
+    description: 'End-to-end delivery from database schema to UI. I own the full path data travels through a product.',
   },
 ]
 
@@ -30,7 +27,7 @@ export default function About() {
         <SectionTitle
           eyebrow="About"
           title="Engineering with business context"
-          description="I build systems that solve operational and analytical problems — especially where data volume, API complexity, and architecture decisions directly shape product value. My work connects backend engineering, data processing, and product thinking."
+          description="I build systems where data volume, API complexity, and architecture decisions directly shape product value."
         />
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -60,13 +57,8 @@ export default function About() {
           transition={{ duration: 0.55, delay: 0.4 }}
           className="mt-8 rounded-3xl border border-slate-800 bg-slate-900/40 p-7"
         >
-          <p className="max-w-4xl text-base leading-relaxed text-slate-300">
-            Fullstack Software Engineer with a strong focus on backend and data engineering.
-            Experienced in building scalable SaaS platforms, designing data pipelines, and
-            implementing multi-tenant architectures. Skilled in integrating external APIs,
-            processing large datasets, and developing data-driven systems for business intelligence.
-            I combine frontend and backend expertise to deliver complete, production-ready solutions —
-            with emphasis on performance, scalability, and real-world impact.
+          <p className="max-w-3xl text-base leading-relaxed text-slate-300">
+            Fullstack Software Engineer with a backend and data engineering focus. I've built multi-tenant SaaS platforms, ETL pipelines, internal tools, and production systems across different industries — always prioritizing reliability and real-world impact.
           </p>
         </motion.div>
       </div>
