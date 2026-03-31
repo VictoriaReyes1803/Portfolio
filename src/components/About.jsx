@@ -5,18 +5,18 @@ import SectionTitle from './SectionTitle'
 const pillars = [
   {
     icon: '⬡',
-    title: 'Backend Systems',
-    description: 'Scalable APIs, reliable data models, and clean application logic built to hold up under real production constraints.',
+    title: 'Data Analysis & Pipelines',
+    description: 'Ingestion, dedup, and transformation of high-volume datasets — 400k+ records — into clean, queryable state using PostgreSQL and Supabase.',
   },
   {
     icon: '⟡',
-    title: 'Data Pipelines',
-    description: 'Ingestion and transformation workflows for high-volume, nested datasets — from batch processing to analytics-ready storage.',
+    title: 'API Integrations & Automation',
+    description: 'End-to-end integration with external systems (Eclipse ERP, Shovels permit API) — syncing, normalizing, and surfacing data through backend logic.',
   },
   {
     icon: '◈',
-    title: 'Fullstack Product',
-    description: 'End-to-end delivery from database schema to UI. I own the full path data travels through a product.',
+    title: 'System Optimization & Operations',
+    description: 'Debugging data inconsistencies, optimizing SQL queries, and improving system performance to keep production workflows reliable and efficient.',
   },
 ]
 
@@ -26,8 +26,8 @@ export default function About() {
       <div className="mx-auto max-w-7xl">
         <SectionTitle
           eyebrow="About"
-          title="Engineering with business context"
-          description="I build systems where data volume, API complexity, and architecture decisions directly shape product value."
+          title="Data-driven, operations-focused"
+          description="I design systems where data quality, pipeline reliability, and integration accuracy directly drive business outcomes."
         />
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -58,7 +58,7 @@ export default function About() {
           className="mt-8 rounded-3xl border border-slate-800 bg-slate-900/40 p-7"
         >
           <p className="max-w-3xl text-base leading-relaxed text-slate-300">
-            Fullstack Software Engineer with a backend and data engineering focus. I've built multi-tenant SaaS platforms, ETL pipelines, internal tools, and production systems across different industries — always prioritizing reliability and real-world impact.
+            Backend and data-focused engineer with hands-on experience building ETL pipelines, integrating external APIs, and analyzing large datasets in PostgreSQL and Supabase. I've worked on SaaS platforms, internal operations systems, and production environments — consistently focused on data accuracy, workflow efficiency, and measurable performance gains.
           </p>
         </motion.div>
       </div>

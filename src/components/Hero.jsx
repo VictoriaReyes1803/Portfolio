@@ -7,13 +7,13 @@ const fadeUp = (delay = 0) => ({
 })
 
 const profileItems = [
-  { label: 'Focus', value: 'Backend · Data Engineering · Fullstack' },
-  { label: 'Experience', value: 'SaaS · ETL · API integrations · AI scoring' },
-  { label: 'Stack', value: 'Node.js · Django · PostgreSQL · React · Angular' },
+  { label: 'Focus', value: 'Data & Automation · Backend · Operations' },
+  { label: 'Experience', value: 'ETL pipelines · API integrations · SQL analysis · system optimization' },
+  { label: 'Stack', value: 'Node.js · Python · PostgreSQL · Supabase · Django' },
   { label: 'Location', value: 'Torreón, Coahuila, Mexico' },
 ]
 
-const heroBadges = ['Node.js', 'Django', 'PostgreSQL', 'React', 'Angular', 'Supabase']
+const heroBadges = ['PostgreSQL', 'Supabase', 'Node.js', 'Python', 'ETL', 'REST APIs', 'SQL']
 
 export default function Hero() {
   return (
@@ -47,25 +47,25 @@ export default function Hero() {
             {...fadeUp(0.1)}
             className="mb-5 font-mono text-xs font-semibold uppercase tracking-[0.3em] text-cyan-400"
           >
-            Fullstack Software Engineer · Backend & Data Focus
+            Data & Automation Engineer · Backend & Operations
           </motion.p>
 
           <motion.h1
             {...fadeUp(0.2)}
             className="max-w-3xl text-4xl font-extrabold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl"
           >
-            I build scalable SaaS platforms,{' '}
-            <span className="text-gradient-cyan">data pipelines</span>, and intelligent systems with{' '}
-            <span className="text-gradient-cyan">real-world impact</span>.
+            I turn raw data into{' '}
+            <span className="text-gradient-cyan">operational intelligence</span> — through pipelines, API integrations, and{' '}
+            <span className="text-gradient-cyan">systems that scale</span>.
           </motion.h1>
 
           <motion.p
             {...fadeUp(0.3)}
             className="mt-6 max-w-xl text-base leading-relaxed text-slate-400 md:text-lg"
           >
-            Focused on backend architecture, data ingestion, external API integrations, and
-            multi-tenant systems. I turn raw data into business intelligence and build products
-            end-to-end — from database to UI.
+            Focused on data analysis, ETL pipeline design, and external API integrations.
+            I work across PostgreSQL, Supabase, and backend systems to surface insights,
+            automate workflows, and keep data reliable at scale.
           </motion.p>
 
           <motion.div {...fadeUp(0.4)} className="mt-8 flex flex-wrap gap-4">
