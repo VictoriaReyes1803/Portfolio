@@ -5,20 +5,20 @@ const experiences = [
   {
     period: '2025 – Present',
     company: 'Magpie in Blue',
-    role: 'Data & Automation Engineer · Backend Lead',
+    role: 'Fullstack Engineer · Backend & Data Lead',
     bullets: [
-      'Designed ETL pipelines processing 400k+ permit records — batch ingestion, deduplication, normalization',
-      'Integrated Epicor Eclipse ERP and Shovels permit API; debugged data mapping inconsistencies between sources',
-      'Optimized PostgreSQL/Supabase queries and RLS policies to maintain performance at production data scale',
+      'Built multi-tenant SaaS for HVAC construction intelligence (Node.js, Supabase, PostgreSQL)',
+      'Designed ETL pipelines: permit ingestion, ERP sync, and AI-powered contractor scoring',
+      'Implemented per-tenant data isolation with PostgreSQL RLS',
     ],
   },
   {
     period: '2025',
     company: 'Nexus Platform',
-    role: 'Backend Developer',
+    role: 'Fullstack Developer',
     bullets: [
-      'Designed PostgreSQL schema for complex multi-entity business workflows with data integrity constraints',
-      'Built Django REST API with business logic automation, permission-scoped endpoints, and data validation layers',
+      'Built Angular SPA frontend with modular architecture, reactive forms, and role-based views',
+      'Designed Django REST API backend: custom serializers, auth middleware, and relational schema for multi-entity workflows',
     ],
   },
   {
@@ -26,8 +26,8 @@ const experiences = [
     company: 'Clayens',
     role: 'Software Engineer',
     bullets: [
-      'Designed SPCM data model and business logic end-to-end for a production operations system',
-      'Managed Linux deployment and ongoing production maintenance — resolved data and system issues in live environment',
+      'Designed SPCM system end-to-end — architecture, data modeling, and business logic',
+      'Deployed on Linux with Nginx; managed production environment and iterative releases',
     ],
   },
   {
@@ -35,8 +35,9 @@ const experiences = [
     company: 'Mayan GPS',
     role: 'Software Developer Intern',
     bullets: [
-      'Diagnosed and resolved backend query bottlenecks on high-frequency GPS data streams (Node.js, MongoDB)',
-      'Achieved 25% performance improvement through query restructuring and data handling optimization',
+      'Built real-time GPS tracking dashboard consuming high-frequency WebSocket/REST data (React, Node.js, MongoDB)',
+      'Optimized backend query patterns and frontend rendering pipeline — achieved 25% performance improvement',
+      'Contributed to both API layer and client-side data handling for live vehicle tracking workflows',
     ],
   },
 ]
@@ -59,7 +60,7 @@ export default function Experience() {
         <SectionTitle
           eyebrow="Experience"
           title="Where I've worked"
-          description="Data pipelines, API integrations, and backend systems — across SaaS, operations software, and high-frequency data environments."
+          description="Production systems, client platforms, and internships across SaaS, industrial software, and GPS tracking."
         />
 
         <div className="grid gap-5 md:grid-cols-2">

@@ -4,52 +4,64 @@ import ProjectCard from './ProjectCard'
 const projects = [
   {
     title: 'Magpie in Blue',
-    subtitle: 'Data & Automation · Construction market intelligence SaaS',
+    subtitle: 'Multi-tenant SaaS · Construction market intelligence',
     description:
-      'Backend data platform for HVAC distributors — ingesting, analyzing, and scoring contractor leads from permit records and ERP data across 400k+ entries.',
+      'Full-stack SaaS platform for HVAC distributors to surface contractor leads from permit data, ERP records, and AI scoring — all isolated per tenant.',
     highlights: [
-      'Ingested and processed 400k+ permit records: batch dedup, normalization, and rate-limited API calls',
-      'Integrated Epicor Eclipse ERP and Shovels permit API — syncing, mapping, and surfacing discrepancies',
-      'Debugged data inconsistencies between external sources and internal PostgreSQL/Supabase tables',
-      'Optimized SQL queries and Supabase RLS policies to maintain performance at scale',
+      'Permit data ingestion pipelines: batch processing, dedup, and rate limiting',
+      'Integrations with Epicor Eclipse ERP, Shovels permit API, and ZipcodeAPI',
+      'AI-powered contractor scoring and lead prioritization with Claude AI',
+      'Per-tenant data isolation via PostgreSQL Row Level Security (RLS)',
     ],
-    stack: ['Node.js', 'Supabase', 'PostgreSQL', 'RLS', 'Eclipse ERP', 'Shovels API'],
+    stack: ['Next.js', 'Node.js', 'Supabase', 'PostgreSQL', 'Claude AI', 'RLS'],
   },
   {
     title: 'Nexus Platform',
-    subtitle: 'Internal operations platform · Django + PostgreSQL',
+    subtitle: 'Internal platform · Angular + Django',
     description:
-      'Backend-driven internal management system — relational schema supporting complex multi-entity business workflows with a REST API layer and role-based data access.',
+      'Full-stack internal management platform — Angular SPA on the frontend, Django REST API on the backend, with a relational schema covering complex multi-entity business workflows.',
     highlights: [
-      'Designed PostgreSQL schema for multi-entity relationships with data integrity constraints',
-      'Built Django REST API with custom serializers, auth middleware, and permission-scoped endpoints',
-      'Automated business workflow logic through backend rules and validation layers',
+      'Angular SPA: modular feature architecture, reactive forms, and role-based UI access',
+      'Django REST Framework: custom serializers, auth middleware, and permission layers',
+      'PostgreSQL schema designed for multi-entity relationships and data integrity constraints',
     ],
-    stack: ['Django', 'Python', 'PostgreSQL', 'REST API'],
+    stack: ['Angular', 'Django', 'Python', 'PostgreSQL', 'REST API'],
   },
   {
     title: 'SPCM System — Clayens',
-    subtitle: 'Production operations system · End-to-end design',
+    subtitle: 'Production system · Full design and Linux deployment',
     description:
-      'Designed and deployed a production system for Clayens — from data modeling and business logic to Linux server configuration and ongoing maintenance.',
+      'Designed and deployed a production system end-to-end at Clayens — from architecture and data modeling to Linux server configuration.',
     highlights: [
-      'Data model and API layer designed to support production-grade operational workflows',
-      'Deployed on Linux with Nginx; managed releases and iterative improvements in production',
-      'Maintained system stability and resolved issues in a live environment',
+      'Full system design: data model, API layer, and business logic',
+      'Linux server deployment with Nginx as reverse proxy',
+      'Ongoing maintenance and iterative feature delivery in a production environment',
     ],
-    stack: ['Node.js', 'PostgreSQL', 'Linux', 'Nginx', 'Docker'],
+    stack: ['Linux', 'Nginx', 'Node.js', 'PostgreSQL', 'Docker'],
   },
   {
     title: 'Mayan GPS — Internship',
-    subtitle: 'GPS tracking platform · Query optimization & data handling',
+    subtitle: 'GPS platform · Backend + Dashboard',
     description:
-      'Backend and data contributions to a GPS tracking platform — optimizing query performance and handling high-frequency data streams from live vehicle feeds.',
+      'Fullstack contributions to a GPS tracking platform — backend API work, MongoDB data layer, and a real-time React dashboard for live vehicle tracking.',
     highlights: [
-      'Identified and resolved query bottlenecks in Node.js/MongoDB backend for high-frequency GPS data',
-      'Achieved 25% performance improvement through query restructuring and data handling fixes',
-      'Worked across REST and WebSocket data streams to ensure accurate, low-latency data delivery',
+      'Built and optimized Node.js/MongoDB backend queries for high-frequency GPS data',
+      'Achieved 25% performance improvement through query optimization and frontend rendering pipeline fixes',
+      'Developed real-time tracking dashboard consuming live WebSocket and REST data streams',
     ],
-    stack: ['Node.js', 'MongoDB', 'REST APIs', 'WebSockets'],
+    stack: ['React', 'Node.js', 'MongoDB', 'WebSockets', 'REST APIs'],
+  },
+  {
+    title: 'Lockity',
+    subtitle: 'Personal project · Web + desktop app',
+    description:
+      'Personal project — a cross-platform credentials and lock management app built with React for both web and desktop.',
+    highlights: [
+      'Single codebase targeting web and desktop via Electron',
+      'Local-first data storage with encrypted credential management',
+      'Clean, minimal UI designed for fast daily use',
+    ],
+    stack: ['React', 'Electron', 'JavaScript'],
   },
 ]
 
@@ -72,10 +84,10 @@ export default function Projects() {
         <SectionTitle
           eyebrow="Projects"
           title="Selected work"
-          description="Data pipelines, API integrations, and backend systems — built for production, focused on data accuracy and operational efficiency."
+          description="Production systems, internal platforms, and personal projects — across SaaS, data engineering, and fullstack development."
         />
 
-        <div className="grid gap-7 md:grid-cols-2">
+        <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}

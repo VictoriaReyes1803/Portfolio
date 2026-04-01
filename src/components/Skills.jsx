@@ -3,38 +3,31 @@ import SkillBlock from './SkillBlock'
 
 const skills = [
   {
-    title: 'Data & Analytics',
-    items: [
-      'PostgreSQL',
-      'Supabase',
-      'SQL Query Optimization',
-      'ETL / Data Pipelines',
-      'Data Ingestion & Dedup',
-      'Row Level Security (RLS)',
-      'Data Inconsistency Debugging',
-      'Large Dataset Handling (400k+ records)',
-    ],
-  },
-  {
-    title: 'Backend & Automation',
+    title: 'Backend & Data',
     items: [
       'Node.js',
       'Python',
       'Django / REST Framework',
-      'REST API Design & Integration',
-      'Epicor Eclipse ERP',
-      'Shovels Permit API',
+      'PostgreSQL',
+      'Supabase',
+      'ETL / Data Pipelines',
+      'REST API Design',
       'Multi-tenant Architecture',
-      'Business Logic Automation',
+      'Row Level Security (RLS)',
+      'SQL Query Optimization',
     ],
   },
   {
-    title: 'Infrastructure & Operations',
-    items: ['Linux', 'Nginx', 'Docker', 'Vercel', 'DigitalOcean', 'Git & GitHub'],
+    title: 'Frontend',
+    items: ['React', 'Angular', 'Next.js', 'Vite', 'Tailwind CSS', 'Ionic'],
+  },
+  {
+    title: 'Infrastructure',
+    items: ['Linux', 'Nginx', 'Docker', 'Vercel', 'DigitalOcean', 'AWS (basics)', 'Git & GitHub'],
   },
   {
     title: 'Additional',
-    items: ['TypeScript', 'React', 'Angular', 'C# / .NET', 'MongoDB', 'SQL Server'],
+    items: ['TypeScript', 'C# / .NET', 'MongoDB', 'SQL Server', 'Android (Java)', 'Claude AI SDK'],
   },
 ]
 
@@ -45,7 +38,7 @@ export default function Skills() {
         <SectionTitle
           eyebrow="Skills"
           title="Technical stack"
-          description="Data analysis and pipeline engineering is my primary focus, backed by API integration experience, backend automation, and operational infrastructure."
+          description="Backend and data engineering is my primary focus. I complement it with frontend capability and infrastructure knowledge to deliver full-stack, production-ready systems."
         />
 
         <div className="grid gap-5 md:grid-cols-2">
