@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import heroPhoto from '../assets/hero.jpeg'
+import HeroBackground from './HeroBackground'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
@@ -6,19 +8,11 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.6, delay, ease: 'easeOut' },
 })
 
-const profileItems = [
-  { label: 'Focus', value: 'Backend · Data Engineering · Fullstack' },
-  { label: 'Experience', value: 'SaaS · ETL · API integrations · AI scoring' },
-  { label: 'Stack', value: 'Node.js · Django · PostgreSQL · React · Angular' },
-  { label: 'Location', value: 'Torreón, Coahuila, Mexico' },
-]
-
-const heroBadges = ['Node.js', 'Django', 'PostgreSQL', 'React', 'Angular', 'Supabase']
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden px-6 pb-24 pt-36 md:px-10 md:pb-32 md:pt-40">
-      {/* Background orbs */}
+      <HeroBackground />
       <div
         className="orb"
         style={{
@@ -45,29 +39,14 @@ export default function Hero() {
         <div>
           <motion.p
             {...fadeUp(0.1)}
-            className="mb-5 font-mono text-xs font-semibold uppercase tracking-[0.3em] text-cyan-400"
+            className="mb-5 font-mono text-ls font-semibold uppercase tracking-[0.3em] text-cyan-400"
           >
             Fullstack Software Engineer · Backend & Data Focus
           </motion.p>
 
-          <motion.h1
-            {...fadeUp(0.2)}
-            className="max-w-3xl text-4xl font-extrabold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl"
-          >
-            I build scalable SaaS platforms,{' '}
-            <span className="text-gradient-cyan">data pipelines</span>, and intelligent systems with{' '}
-            <span className="text-gradient-cyan">real-world impact</span>.
-          </motion.h1>
+          
 
-          <motion.p
-            {...fadeUp(0.3)}
-            className="mt-6 max-w-xl text-base leading-relaxed text-slate-400 md:text-lg"
-          >
-            Focused on backend architecture, data ingestion, external API integrations, and
-            multi-tenant systems. I turn raw data into business intelligence and build products
-            end-to-end — from database to UI.
-          </motion.p>
-
+          
           <motion.div {...fadeUp(0.4)} className="mt-8 flex flex-wrap gap-4">
             <a
               href="#projects"
@@ -84,49 +63,67 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.div {...fadeUp(0.5)} className="mt-8 flex flex-wrap gap-2">
-            {heroBadges.map((badge) => (
-              <span
-                key={badge}
-                className="rounded-xl border border-slate-800 bg-slate-900/60 px-3 py-1.5 font-mono text-xs text-slate-400"
-              >
-                {badge}
-              </span>
-            ))}
-          </motion.div>
+         
         </div>
 
-        {/* Right: Profile snapshot card */}
+        {/* Right: Profile card */}
         <motion.div
           initial={{ opacity: 0, x: 32 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.35, ease: 'easeOut' }}
           className="rounded-3xl border border-slate-800 bg-slate-900/70 p-1.5 shadow-2xl shadow-black/40 backdrop-blur-sm glow-cyan"
         >
-          {/* Card inner */}
-          <div className="rounded-[1.4rem] border border-slate-700/50 bg-slate-950/80 p-6">
-            {/* Terminal-style header */}
-            <div className="mb-5 flex items-center gap-2">
-              <span className="h-3 w-3 rounded-full bg-red-500/70" />
-              <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
-              <span className="h-3 w-3 rounded-full bg-green-500/70" />
-              <span className="ml-3 font-mono text-xs text-slate-500">profile.json</span>
-            </div>
+          <div className="overflow-hidden rounded-[1.4rem] border border-slate-700/50 bg-slate-950">
 
-            <div className="space-y-5">
-              {profileItems.map(({ label, value }) => (
-                <div key={label}>
-                  <p className="font-mono text-xs text-slate-500">{`// ${label}`}</p>
-                  <p className="mt-1 text-sm font-semibold text-slate-100">{value}</p>
-                </div>
-              ))}
-            </div>
+            {/* Photo — full width, fades into card */}
+            <div className="relative h-48 w-full sm:h-56 lg:h-64">
+              <img
+                src={heroPhoto}
+                alt="Victoria Reyes"
+                className="h-full w-full object-cover"
+                style={{ objectPosition: 'center 20%' }}
+              />
+              <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-slate-950 to-transparent sm:h-24 lg:h-28" />
 
-            <div className="mt-6 border-t border-slate-800 pt-5">
-              <div className="flex items-center gap-2">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
-                <span className="font-mono text-xs text-green-400">Open to new opportunities</span>
+              {/* Terminal dots */}
+              <div className="absolute left-4 top-4 flex items-center gap-1.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-red-500/60" />
+                <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/60" />
+                <span className="h-2.5 w-2.5 rounded-full bg-green-500/60" />
               </div>
+
+              {/* Availability badge */}
+              <div className="absolute right-4 top-4 flex items-center gap-1.5 rounded-full border border-green-500/25 bg-slate-950/70 px-2.5 py-1 backdrop-blur-md">
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" />
+                <span className="font-mono text-[10px] font-medium text-green-400">Available</span>
+              </div>
+            </div>
+
+            {/* Info */}
+            <div className="px-6 pb-7 pt-3">
+              <h2 className="text-base font-bold tracking-tight text-white">Victoria Jaime Reyes</h2>
+              <p className="mt-1 font-mono text-[11px] font-semibold tracking-wide text-cyan-400">
+                Backend · Data · Fullstack
+              </p>
+
+              <div className="my-5 border-t border-slate-800/80" />
+
+              {/* Stack pills */}
+              <div className="flex flex-wrap gap-1.5">
+                {['Node.js', 'PostgreSQL', 'Django', 'Claude AI', 'Next.js', 'Supabase', 'Python', 'React', 'Angular'].map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-lg border border-slate-800 bg-slate-900/80 px-2 py-1 font-mono text-[10px] text-slate-400"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              {/* Domain keywords */}
+              <p className="mt-4 font-mono text-[11px] leading-relaxed text-slate-500">
+                SaaS · APIs · Automation · ETL · ELT
+              </p>
             </div>
           </div>
         </motion.div>

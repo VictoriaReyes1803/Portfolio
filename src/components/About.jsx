@@ -6,17 +6,17 @@ const pillars = [
   {
     icon: '⬡',
     title: 'Backend Systems',
-    description: 'Scalable APIs, reliable data models, and clean application logic built to hold up under real production constraints.',
+    description: 'Scalable APIs, reliable data models',
   },
   {
     icon: '⟡',
     title: 'Data Pipelines',
-    description: 'Ingestion and transformation workflows for high-volume, nested datasets — from batch processing to analytics-ready storage.',
+    description: 'Ingestion and transformation workflows for high-volume.',
   },
   {
     icon: '◈',
     title: 'Fullstack Product',
-    description: 'End-to-end delivery from database schema to UI. I own the full path data travels through a product.',
+    description: 'End-to-end delivery from database schema to UI.',
   },
 ]
 
@@ -49,18 +49,6 @@ export default function About() {
           ))}
         </div>
 
-        {/* Summary strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.55, delay: 0.4 }}
-          className="mt-8 rounded-3xl border border-slate-800 bg-slate-900/40 p-7"
-        >
-          <p className="max-w-3xl text-base leading-relaxed text-slate-300">
-            Fullstack Software Engineer with a backend and data engineering focus. I've built multi-tenant SaaS platforms, ETL pipelines, internal tools, and production systems across different industries — always prioritizing reliability and real-world impact.
-          </p>
-        </motion.div>
       </div>
     </section>
   )

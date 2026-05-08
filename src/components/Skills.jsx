@@ -3,31 +3,53 @@ import SkillBlock from './SkillBlock'
 
 const skills = [
   {
-    title: 'Backend & Data',
+    title: 'Backend & Automation',
     items: [
       'Node.js',
       'Python',
       'Django / REST Framework',
       'PostgreSQL',
       'Supabase',
-      'ETL / Data Pipelines',
       'REST API Design',
+      'API Orchestration',
+      'Async Workflows',
+      'ETL / Data Pipelines',
       'Multi-tenant Architecture',
       'Row Level Security (RLS)',
       'SQL Query Optimization',
     ],
   },
   {
+    title: 'AI & LLM Integration',
+    items: [
+      'Claude AI SDK',
+      'Claude Code',
+      'Cursor',
+      'LLM Integrations',
+      'AI Agents',
+      'Prompt Engineering',
+      'Workflow Automation',
+      'Rapid Prototyping',
+    ],
+  },
+  {
     title: 'Frontend',
-    items: ['React', 'Angular', 'Next.js', 'Vite', 'Tailwind CSS', 'Ionic'],
+    items: ['React', 'Angular', 'Next.js', 'Vite', 'Tailwind CSS', 'TypeScript', 'Ionic'],
   },
   {
-    title: 'Infrastructure',
-    items: ['Linux', 'Nginx', 'Docker', 'Vercel', 'DigitalOcean', 'AWS (basics)', 'Git & GitHub'],
-  },
-  {
-    title: 'Additional',
-    items: ['TypeScript', 'C# / .NET', 'MongoDB', 'SQL Server', 'Android (Java)', 'Claude AI SDK'],
+    title: 'Infrastructure & Tooling',
+    items: [
+      'Linux',
+      'Nginx',
+      'Docker',
+      'Vercel',
+      'DigitalOcean',
+      'AWS (basics)',
+      'Git & GitHub',
+      'C# / .NET',
+      'MongoDB',
+      'SQL Server',
+    ],
   },
 ]
 
@@ -38,7 +60,7 @@ export default function Skills() {
         <SectionTitle
           eyebrow="Skills"
           title="Technical stack"
-          description="Backend and data engineering is my primary focus. I complement it with frontend capability and infrastructure knowledge to deliver full-stack, production-ready systems."
+          description="Backend and automation engineering is my primary focus, with AI and LLM integration as a growing specialization. I complement both with frontend delivery and infrastructure knowledge."
         />
 
         <div className="grid gap-5 md:grid-cols-2">
